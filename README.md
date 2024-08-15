@@ -14,7 +14,8 @@ if establishments.find_one({"BusinessName":halal_rest["BusinessName"]}) == None:
     establishments.insert_one(halal_rest)
     
     # Print objectID when inserted
-    print(f'Adding restaurant with Business Name: {halal_rest["BusinessName"]}') ```
+    print(f'Adding restaurant with Business Name: {halal_rest["BusinessName"]}')
+ ```
 
 * Update the new restauarant with the correct BusineesTypeID.
   
