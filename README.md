@@ -27,15 +27,15 @@ if establishments.find_one({"BusinessName":halal_rest["BusinessName"]}) == None:
 result = establishments.delete_many(query)`
 
 * Convert latitude and longitude to decimal numbers.
-
+```python
 `establishments.update_many({}, [ {'$set': { "geocode.latitude" : {'$toDouble': "$geocode.latitude"},
                                                 "geocode.longitude" : {'$toDouble': "$geocode.longitude"}
                                               }
                                      } ]
                               )`
-
+```
  * First set the non 1-5 Rating Values to Null and then Convert the data type from String to Integer for RatingValue.   
- 
+ ```python
  `non_ratings = ["AwaitingInspection", "Awaiting Inspection", "AwaitingPublication", "Pass", "Exempt"]
 establishments.update_many({"RatingValue": {"$in": non_ratings}}, [ {'$set':{ "RatingValue" : None}} ])
 
@@ -43,9 +43,9 @@ establishments.update_many({}, [ {'$set': { "RatingValue" : {'$toInt': "$RatingV
                                               }
                                      } ]
                               )`
-
+```
 * Check that the coordinates and rating value are now numbers.
-
+```python
 `query = {
     "$expr": {
         "$and": [
@@ -61,7 +61,7 @@ if len(results) > 0:
     print("All checked fields are stored as numbers.")
 else:
     print("Some fields are not stored as numbers.")`
-
+```
 
 ## Deliverable 2: A Jupyter notebook containing code that performs the exploratory analysis queries in the database.
 
