@@ -65,7 +65,7 @@ else:
 
 ## Deliverable 2: A Jupyter notebook containing code that performs the exploratory analysis queries in the database.
 
-Eat Safe, Love has specific questions they want you to answer, which will help them find the locations they wish to visit and avoid. The `NoSQL_analysis.ipynb` queries relevant information for analyses and converts results into Pandas DataFrame.
+Eat Safe, Love has specific questions they want me to answer, which will help them find the locations they wish to visit and avoid. The `NoSQL_analysis.ipynb` queries relevant information for analyses and converts results into Pandas DataFrame.
 
 1. Which establishments have a hygiene score equal to 20?
 
