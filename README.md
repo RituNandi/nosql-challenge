@@ -8,12 +8,13 @@ The `NoSQL_setup.ipynb` sets up and updates the database. The data provided in t
 
 * Insert the new halal restaurant opened in Greenwich to the Database.
   
-`if establishments.find_one({"BusinessName":halal_rest["BusinessName"]}) == None:
+```python
+if establishments.find_one({"BusinessName":halal_rest["BusinessName"]}) == None:
     # Insert the new data into the collection
     establishments.insert_one(halal_rest)
     
     # Print objectID when inserted
-    print(f'Adding restaurant with Business Name: {halal_rest["BusinessName"]}')`
+    print(f'Adding restaurant with Business Name: {halal_rest["BusinessName"]}') ```
 
 * Update the new restauarant with the correct BusineesTypeID.
   
